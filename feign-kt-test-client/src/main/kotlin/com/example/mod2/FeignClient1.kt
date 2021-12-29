@@ -3,6 +3,7 @@ package com.example.mod2
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
 
 /**
  * *******************************
@@ -10,8 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable
  * Project: feignTest2
  * *******************************
  */
-@FeignClient(name = "kt-test1", url = "http://localhost:8081/kt_test/api")
+//@FeignClient(name = "kt-test1", url = "http://localhost:8081/kt_test/api") // with set server context-path
+@FeignClient(name = "kt-test1", url = "http://localhost:8081") // without server context-path
 interface FeignClient1 {
-    @GetMapping("/test0/{v1}/bye/{v2}")
+    @RequestMapping("/test0/{v1}/bye/{v2}")
     fun m1(@PathVariable v1: String, @PathVariable v2: String): String?
 }

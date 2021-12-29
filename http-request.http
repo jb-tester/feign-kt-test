@@ -1,0 +1,10 @@
+###server-controller
+GET http://localhost:8081/simple/hello
+
+###server-controller-with-contextpath -!
+GET http://localhost:8081/kt_test/api/simple/hello
+
+###client-controller
+GET http://localhost:8080/test2
+
+###
