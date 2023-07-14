@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
  * Project: feignTest2
  * *******************************
  */
-//@FeignClient(name = "\${client.name}", url = "\${client.url}")
+//@FeignClient(name = "\${client.name}", url = "\${client.url}") // with placeholders
 //@FeignClient(name = "kt-test2", url = "http://localhost:8081/kt_test/api") // with set server context-path
 @FeignClient(name = "kt-test2", url = "http://localhost:8081/") // without server context-path
 interface FeignClient2 {
